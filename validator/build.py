@@ -83,7 +83,7 @@ def CheckPrereqs():
     try:
       __import__(module)
     except ImportError as e:
-      print "ImportError({0}): {1}".format(e.errno, e.strerror)
+      print "ImportError({0})".format(e.strerror)
       Die('%s not found. Try "apt-get install python-protobuf"' % module)
 
   # Ensure that npm is installed.
