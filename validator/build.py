@@ -82,8 +82,7 @@ def CheckPrereqs():
     module = 'google.protobuf.%s' % m
     try:
       __import__(module)
-    except ImportError as e:
-      print "ImportError({0})".format(e.strerror)
+    except ImportError:
       Die('%s not found. Try "apt-get install python-protobuf"' % module)
 
   # Ensure that npm is installed.
